@@ -1,0 +1,27 @@
+0 emptyLine
+1 > Create symbol table (scope level 0)
+2 > Dump symbol table (scope level: 1)
+
+5 > Insert `main` (addr: -1) to scope level 0
+
+21 func: main
+25 RETURN
+
+61 cout string string
+
+70 IDENT (name=endl, address=-1)
+72 BOOL_LIT
+73 INT_LIT
+74 FLOAT_LIT
+75 STR_LIT
+
+
+
+
+Index     Name                Type      Addr      Lineno    Func_sig  
+0         argv                string    0         1         -         
+
+> Dump symbol table (scope level: 0)
+Index     Name                Type      Addr      Lineno    Func_sig  
+0         main                function  -1        1         ([Ljava/lang/String;)I
+Total lines: 4
