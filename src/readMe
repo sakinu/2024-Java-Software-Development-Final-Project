@@ -1,5 +1,4 @@
-symbolTable[scope][name] 指向 Level=scope 的 name 被儲存的位置
-Term 實際的值用String存
+Term 實際的值先用String存
 
 0 "auto"
 1 "void"
