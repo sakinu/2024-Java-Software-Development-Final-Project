@@ -2,16 +2,72 @@
 func: main
 > Insert `main` (addr: -1) to scope level 0
 > Create symbol table (scope level 1)
-STR_LIT "Hello World"
+> Insert `argv` (addr: 0) to scope level 1
+INT_LIT 0
+> Insert `x` (addr: 1) to scope level 1
+IDENT (name=x, address=1)
 IDENT (name=endl, address=-1)
-cout string string
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 10
+EQL_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 2
+ADD_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 3
+SUB_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 4
+MUL_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 5
+DIV_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 6
+REM_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 4092
+BOR_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
+IDENT (name=x, address=1)
+INT_LIT 255
+BAN_ASSIGN
+IDENT (name=x, address=1)
+IDENT (name=endl, address=-1)
+cout int string
 INT_LIT 0
 RETURN
 
 > Dump symbol table (scope level: 1)
 Index     Name                Type      Addr      Lineno    Func_sig  
+0         argv                string    0         1         -         
+1         x                   int       1         2         -         
+2         yy                  float     2         21        -         
+3         s                   string    3         34        -         
+4         bbb                 bool      4         39        -         
 
 > Dump symbol table (scope level: 0)
 Index     Name                Type      Addr      Lineno    Func_sig  
 0         main                function  -1        1         ([Ljava/lang/String;)I
-Total lines: 4
+Total lines: 43

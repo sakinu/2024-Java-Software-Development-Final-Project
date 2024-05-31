@@ -1,19 +1,68 @@
 0 emptyLine
 1 > Create symbol table (scope level 0)
 2 > Dump symbol table (scope level: 1)
-
 5 > Insert `main` (addr: -1) to scope level 0
+7 Index     Name                Type      Addr      Lineno    Func_sig  
+8 0         argv                string    0         1         -         
 
 21 func: main
 25 RETURN
 
-61 cout string string
+31 NOT
+32 BNT
+33 NEG
+35 INC_ASSIGN
+36 DEC_ASSIGN
 
-70 IDENT (name=endl, address=-1)
-72 BOOL_LIT
-73 INT_LIT
-74 FLOAT_LIT
-75 STR_LIT
+38 MUL
+39 DIV
+40 REM
+
+42 ADD
+43 SUB
+
+45 SHR
+46 SHL
+
+48 GTR
+49 LES
+50 GEQ
+51 LEQ
+
+53 EQL
+54 NEQ
+
+56 BAN
+
+57 BXO
+
+58 BOR
+
+60 LAN
+
+61 LOR
+
+63 EQL_ASSIGN
+64 ADD_ASSIGN
+65 SUB_ASSIGN
+66 MUL_ASSIGN
+67 DIV_ASSIGN
+68 REM_ASSIGN
+69 SHR_ASSIGN
+70 SHL_ASSIGN
+71 BAN_ASSIGN
+72 BOR_ASSIGN
+73 BXO_ASSIGN
+74 INC_ASSIGN
+75 DEC_ASSIGN
+
+71 cout string string
+
+80 IDENT (name=endl, address=-1)
+82 BOOL_LIT
+83 INT_LIT
+84 FLOAT_LIT
+85 STR_LIT
 
 
 
