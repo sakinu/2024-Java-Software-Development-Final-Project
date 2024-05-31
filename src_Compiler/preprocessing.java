@@ -5,11 +5,31 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
-public class preprocessing {
-    static List<Term> getIdentTable(int totalLines, String[] lines, String[][] lineTokens) {
-        List<Term> IdentTable = new ArrayList<>();
-        
+public class Preprocessing {
+    static private HashMap<Integer, Integer> endTable = new HashMap<>();
+    static private HashMap<Integer, Integer> end2Table = new HashMap<>();
+    static private HashMap<String, Function> funcTable = new HashMap<>();
+    static private List<Term> IdentTable = new ArrayList<>();
+
+    static void init(int totalLines, String[] lines, String[][] lineTokens) {
+        Stack<Integer> startStack = new Stack<>();
+        for(int lineId=0; lineId<totalLines; lineId++) {
+            if(Api.getLineType(lineId, lineTokens[lineId]) == 1) {
+                startStack.push(lineId);
+            }
+            if(Api.getLineType(lineId, lineTokens[lineId]) == 2) {
+                endTable.put(startStack.peek(), lineId);
+                lineId += 2;
+                while(lineId < totalLines && Api.isNumber(lineTokens[lineId][0])){
+                    lineId++;
+                }
+                end2Table.put(startStack.peek(), lineId);
+                startStack.pop();
+            }
+        }
+
         for(int lineId = 0; lineId < totalLines; lineId++) {
             if(Api.getLineType(lineId, lineTokens[lineId]) == 7) {
                 lineId += 1;
@@ -20,10 +40,7 @@ public class preprocessing {
                 }
             }
         }
-        return IdentTable;
-    }
-    static HashMap<String, Function> getFunctionTable(int totalLines, String[] lines, String[][] lineTokens) {
-        HashMap<String, Function> funcTable = new HashMap<>();
+
         Queue<Integer> funcReturnType = new LinkedList<>();
         int lastDump = 0;
 
@@ -44,7 +61,7 @@ public class preprocessing {
         }
         
         for(int lineId = 0; lineId < totalLines; lineId++) {
-            if(Api.getLineType(lineId, lineTokens[lineId]) == 21) {         //找到開頭
+            if(Api.getLineType(lineId, lineTokens[lineId]) == 11) {         //func 找到開頭
                 int Level = 1;
                 String funcName = lineTokens[lineId][1];
                 int start = lineId + 2;     //到Creat
@@ -74,6 +91,21 @@ public class preprocessing {
         for(var key: funcTable.keySet()) {
             funcTable.get(key).print();
         }
-        return funcTable;
+    }
+
+    static Integer getEnd(Integer start) {
+        return endTable.get(start);
+    }
+
+    static Integer getEnd2(Integer start) {
+        return end2Table.get(start);
+    }
+
+    static Function getFunction(String functionName) {
+        return funcTable.get(functionName);
+    }
+
+    static Term getIdentUseAddrs(int IdentAddrs) {
+        return IdentTable.get(IdentAddrs);
     }
 }

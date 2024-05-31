@@ -29,19 +29,24 @@ public class Opt {
         put(58, 2);
         put(60, 2);
         put(61, 2);
-        put(63, 2);
-        put(64, 2);
-        put(65, 2);
-        put(66, 2);
-        put(67, 2);
-        put(68, 2);
-        put(69, 2);
-        put(70, 2);
-        put(71, 2);
-        put(72, 2);
-        put(73, 2);
-        put(74, 2);
-        put(75, 2);
+        put(71, 1);
+        put(72, 1);
+        put(73, 1);
+        put(74, 1);
+        put(75, 1);
+        put(81, 2);
+        put(82, 2);
+        put(83, 2);
+        put(84, 2);
+        put(85, 2);
+        put(86, 2);
+        put(87, 2);
+        put(88, 2);
+        put(89, 2);
+        put(90, 2);
+        put(91, 2);
+        put(92, 2);
+        put(93, 2);
     }};
 
     static Integer getTermNeed(int Type) {
@@ -53,6 +58,9 @@ public class Opt {
         switch (Type) {
             case 31:
                 Terms[0].NOT();
+                break;
+            case 32:
+                Terms[0].BNT();
                 break;
             case 33:
                 Terms[0].NEG();
@@ -68,6 +76,9 @@ public class Opt {
                 break;
             case 42:
                 Terms[0].ADD(Terms[1]);
+                break;
+            case 43:
+                Terms[0].SUB(Terms[1]);
                 break;
             case 45:
                 Terms[0].SHR(Terms[1]);
@@ -87,6 +98,12 @@ public class Opt {
             // case 51:
             //     Terms[0].LEQ(Terms[1]);
             //     break;
+            case 53:
+                Terms[0].EQL(Terms[1]);
+                break;
+            case 54:
+                Terms[0].NEQ(Terms[1]);
+                break;
             case 56:
                 Terms[0].BAN(Terms[1]);
                 break;
@@ -96,46 +113,54 @@ public class Opt {
             case 58:
                 Terms[0].BOR(Terms[1]);
                 break;
-            case 54:
-                Terms[0].NEQ(Terms[1]);
-                break;
             case 60:
                 Terms[0].LAN(Terms[1]);
                 break;
             case 61:
                 Terms[0].LOR(Terms[1]);
                 break;
-            case 63:
-                Terms[0].EQL_ASSIGN(Terms[1]);
-                break;
-            case 64:
-                Terms[0].ADD_ASSIGN(Terms[1]);
-                break;
-            case 65:
-                Terms[0].SUB_ASSIGN(Terms[1]);
-                break;
-            case 66:
-                Terms[0].MUL_ASSIGN(Terms[1]);
-                break;
-            case 67:
-                Terms[0].DIV_ASSIGN(Terms[1]);
-                break;
-            case 68:
-                Terms[0].REM_ASSIGN(Terms[1]);
-                break;
-            case 69:
-                Terms[0].SHR_ASSIGN(Terms[1]);
-                break;
-            case 70:
-                Terms[0].SHL_ASSIGN(Terms[1]);
-                break;
+                
             case 71:
-                Terms[0].BAN_ASSIGN(Terms[1]);
-                break;
-            case 72:
-                Terms[0].BOR_ASSIGN(Terms[1]);
+                Terms[0].CastBool();
                 break;
             case 73:
+                Terms[0].CastInt();
+                break;
+            case 74:
+                Terms[0].CastFloat();
+                break;
+
+            case 81:
+                Terms[0].EQL_ASSIGN(Terms[1]);
+                break;
+            case 82:
+                Terms[0].ADD_ASSIGN(Terms[1]);
+                break;
+            case 83:
+                Terms[0].SUB_ASSIGN(Terms[1]);
+                break;
+            case 84:
+                Terms[0].MUL_ASSIGN(Terms[1]);
+                break;
+            case 85:
+                Terms[0].DIV_ASSIGN(Terms[1]);
+                break;
+            case 86:
+                Terms[0].REM_ASSIGN(Terms[1]);
+                break;
+            case 87:
+                Terms[0].SHR_ASSIGN(Terms[1]);
+                break;
+            case 88:
+                Terms[0].SHL_ASSIGN(Terms[1]);
+                break;
+            case 89:
+                Terms[0].BAN_ASSIGN(Terms[1]);
+                break;
+            case 90:
+                Terms[0].BOR_ASSIGN(Terms[1]);
+                break;
+            case 91:
                 Terms[0].BXO_ASSIGN(Terms[1]);
                 break;
             // case 74:

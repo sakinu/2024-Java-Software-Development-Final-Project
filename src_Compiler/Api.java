@@ -13,7 +13,7 @@ public class Api {
         put("string", 5);
     }};
     private static HashMap<Integer, String> defualtVal = new HashMap<Integer, String>(){{
-        put(1, "false");
+        put(1, "0");
         put(2, "");
         put(3, "0");
         put(4, "0.0");
@@ -23,6 +23,12 @@ public class Api {
         add(1);
         add(2);
         add(3);
+    }};
+    private static HashSet<Integer> numberType = new HashSet<>(){{
+        add(1);
+        add(2);
+        add(3);
+        add(4);
     }};
     private static HashMap<String, Term> keywordTable = new HashMap<String, Term>(){{
         put("endl", new Term(true, "endl", 5, "\n", -1));
@@ -36,6 +42,10 @@ public class Api {
             }
         }
         return true;
+    }
+
+    static boolean isNumberType(int type) {
+        return numberType.contains(type);
     }
 
     static boolean isIntegerType(int type) {
@@ -70,11 +80,8 @@ public class Api {
         }
         return null;
     }
-
-    static Boolean converBool(Term term){         //
-        String nowVal = term.getVal();
-        int nowType = term.getType();
-
+    
+    static Boolean getConvertBoolean(Integer nowType, String nowVal) {
         Boolean ret = null;
         switch (nowType) {
             case 1:
@@ -90,13 +97,19 @@ public class Api {
                 ret = (Float.parseFloat(nowVal) != 0);      //$
                 break;
             case 5:
-                if(nowVal.equals("false"))
+                if(nowVal.equals("0"))
                     ret = false;
                 else
                     ret = true;
                 break;
         }
         return ret;
+    }
+    static Boolean converBool(Term term){         //
+        return getConvertBoolean(term.getType(), term.getVal());
+    }
+    static Boolean converBool(int type, String val){         //
+        return getConvertBoolean(type, val);
     }
     static Integer converInt(Term term){         //
         String nowVal = term.getVal();
@@ -105,15 +118,15 @@ public class Api {
         Integer ret = null;
         switch (nowType) {
             case 1:
-                if(nowVal.equals("false") || nowVal.equals("0") || nowVal.equals("-0"))
+                if(nowVal.equals("0") || nowVal.equals("0") || nowVal.equals("-0"))
                     ret = 0;
                 else
                     ret = 1;
                 break;
-            // case 2:
-            //     ret = String.valueOf(strVal.charAt(0));
-            //     break;
             case 3:
+                if(nowVal.contains(".")) {
+                    nowVal = String.valueOf((int)Math.floor(Float.parseFloat(nowVal)));
+                }
                 ret = Integer.valueOf(nowVal);
                 break;
             case 4:
@@ -132,7 +145,7 @@ public class Api {
         Float ret = null;
         switch (nowType) {
             case 1:
-                if(nowVal.equals("false") || nowVal.equals("0") || nowVal.equals("-0"))
+                if(nowVal.equals("0") || nowVal.equals("-0"))
                     ret = 0f;
                 else
                     ret = 1f;
@@ -159,10 +172,10 @@ public class Api {
         String ret = null;
         switch (nowType) {
             case 1:
-                if(nowVal.equals("false") || nowVal.equals("0") || nowVal.equals("-0"))
-                    ret = "false";
+                if(nowVal.equals("0") || nowVal.equals("-0"))
+                    ret = "0";
                 else
-                    ret = "true";
+                    ret = "1";
                 break;
             // case 2:
             //     ret = String.valueOf(strVal.charAt(0));
@@ -206,13 +219,13 @@ public class Api {
         return ret;
     }
 
-    // static String getIdentNameFromAddrs(Integer addrs) {  //$
+    static String getIdentNameUseAddrs(Integer addrs) {
+        return Preprocessing.getIdentUseAddrs(addrs).getName();
+    }
 
-    // }
-
-    static Integer getIdentType(List<Term> IdentTable, Integer IdentAddrs, String IdentName) {
+    static Integer getIdentType(Integer IdentAddrs, String IdentName) {
         Integer ret = Api.getKeywordType(IdentName);
-        if(ret == null) ret = IdentTable.get(IdentAddrs).getType();
+        if(ret == null) ret = Preprocessing.getIdentUseAddrs(IdentAddrs).getType();
         return ret;
     }
 
@@ -220,8 +233,12 @@ public class Api {
         return Integer.parseInt(Tokens[4].substring(0, Tokens[4].length()-1));
     }
 
+    static Integer getCreateLevel(String Tokens[]) {
+        return Integer.valueOf(Tokens[6].substring(0, Tokens[6].length()-1));
+    }
+
     static int getLineType(int lineId, String[] Tokens) {
-        if(Tokens.length == 0) return 0;
+        if(Tokens.length == 0 || Tokens.length == 1 && Tokens[0].isEmpty()) return 0;
         if(Tokens[0].equals(">")) {
             if(Tokens[1].equals("Create")) {
                 return 1;
@@ -241,10 +258,13 @@ public class Api {
         }
 
         if(Tokens[0].equals("func:")) {
-            return 21;
+            return 11;
         }
         if(Tokens[0].equals("RETURN")) {
-            return 25;
+            return 13;
+        }
+        if(Tokens[0].equals("IF")) {
+            return 21;
         }
 
         if(Tokens[0].equals("NOT")) {
@@ -316,65 +336,69 @@ public class Api {
         if(Tokens[0].equals("LOR")) {
             return 61;
         }
+        if(Tokens[0].equals("Cast")) {
+            return 70 + Api.getIntType(Tokens[2]);
+        }
+
         if(Tokens[0].equals("EQL_ASSIGN")) {
-            return 63;
+            return 81;
         }
         if(Tokens[0].equals("ADD_ASSIGN")) {
-            return 64;
+            return 82;
         }
         if(Tokens[0].equals("SUB_ASSIGN")) {
-            return 65;
+            return 83;
         }
         if(Tokens[0].equals("MUL_ASSIGN")) {
-            return 66;
+            return 84;
         }
         if(Tokens[0].equals("DIV_ASSIGN")) {
-            return 67;
+            return 85;
         }
         if(Tokens[0].equals("REM_ASSIGN")) {
-            return 68;
+            return 86;
         }
         if(Tokens[0].equals("SHR_ASSIGN")) {
-            return 69;
+            return 87;
         }
         if(Tokens[0].equals("SHL_ASSIGN")) {
-            return 70;
+            return 88;
         }
         if(Tokens[0].equals("BAN_ASSIGN")) {
-            return 71;
+            return 89;
         }
         if(Tokens[0].equals("BOR_ASSIGN")) {
-            return 72;
+            return 90;
         }
         if(Tokens[0].equals("BXO_ASSIGN")) {
-            return 73;
+            return 91;
         }
         if(Tokens[0].equals("INC_ASSIGN")) {
-            return 74;
+            return 92;
         }
         if(Tokens[0].equals("DEC_ASSIGN")) {
-            return 75;
+            return 93;
         }
 
         if(Tokens[0].equals("cout")){
-            return 81;
+            return 101;
         }
         
 
         if(Tokens[0].equals("IDENT")) {
-            return 90;
+            return 110;
         }
         if(Tokens[0].equals("BOOL_LIT")) {
-            return 92;
+            return 112;
         }
         if(Tokens[0].equals("INT_LIT")) {
-            return 93;
+            return 113;
         }
         if(Tokens[0].equals("FLOAT_LIT")) {
-            return 94;
+            return 114;
         }
         if(Tokens[0].equals("STR_LIT")) {
-            return 95;
+            return 115;
         }
         return -1;
     }

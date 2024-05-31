@@ -1,5 +1,7 @@
 package src_Compiler;
 
+import java.util.BitSet;
+
 public class Term {
     private boolean isIdent;
     private String IdentName;
@@ -69,10 +71,38 @@ public class Term {
     //     return ObjVal.getVal();
     // }
 
+    void converSelfType() {
+        if(!isIdent) return;
+        switch (this.valType) {
+            case 1:
+                this.val = String.valueOf(Api.converBool(this));
+                break;
+            case 3:
+                this.val = String.valueOf(Api.converInt(this));
+                break;
+            case 4:
+                this.val = String.valueOf(Api.converFloat(this));
+                break;
+            case 5:
+                this.val = Api.converString(this);
+                break;
+            default:
+                System.out.println("WTF converSelfType");
+                break;
+        }
+    }
+
     void NOT() {
         Boolean tmp = Api.converBool(this);
         this.val = String.valueOf(!tmp);
         // ObjVal.setVal(this.val);
+    }
+    void BNT() {
+        if(!Api.isIntegerType(this.getType())){
+            System.out.println("WTF");
+        }
+        String tmp = String.valueOf(~Api.converInt(this));
+        this.val = tmp;
     }
     void NEG() {
         String retVal = this.val.charAt(0) == '-' ? this.val.substring(1) : ("-" + this.val);
@@ -208,7 +238,7 @@ public class Term {
         this.valType = 1;
         // ObjVal.setVal(this.val);
     }
-    void LEQ(Term otherTerm) {
+    void EQL(Term otherTerm) {
         String retVal = "";
         Term term1,term2;
         if(this.valType < otherTerm.valType) {
@@ -223,7 +253,7 @@ public class Term {
             if(term2.valType != 5){
                 System.out.println("WTF LEQ");
             }
-            retVal = term1.equals(term2) ? "true" : "false";
+            retVal = term1.equals(term2) ? "1" : "0";
         }
         int mxType = Math.max(this.getType(),otherTerm.getType());
         switch(mxType) {
@@ -244,7 +274,7 @@ public class Term {
         this.valType = 1;
     }
     void NEQ(Term otherTerm) {
-        this.LEQ(otherTerm);
+        this.EQL(otherTerm);
         this.val = String.valueOf(!Boolean.valueOf(this.val));
     }
     void BAN(Term otherTerm) {
@@ -268,6 +298,18 @@ public class Term {
         this.val = String.valueOf(Api.converBool(this) || Api.converBool(otherTerm));
         this.valType = 1;
         // ObjVal.setVal(this.val);
+    }
+    void CastBool() {
+        this.setVal(String.valueOf(Api.converBool(this)));
+        this.setValType(1);
+    }
+    void CastInt() {
+        this.setVal(String.valueOf(Api.converInt(this)));
+        this.setValType(3);
+    }
+    void CastFloat() {
+        this.setVal(String.valueOf(Api.converFloat(this)));
+        this.setValType(4);
     }
     void EQL_ASSIGN(Term otherTerm) {
         this.val = otherTerm.val;

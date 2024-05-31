@@ -5,8 +5,11 @@
 7 Index     Name                Type      Addr      Lineno    Func_sig  
 8 0         argv                string    0         1         -         
 
-21 func: main
-25 RETURN
+11 func: main
+13 RETURN
+
+21 IF
+22 ELSE
 
 31 NOT
 32 BNT
@@ -42,30 +45,33 @@
 
 61 LOR
 
-63 EQL_ASSIGN
-64 ADD_ASSIGN
-65 SUB_ASSIGN
-66 MUL_ASSIGN
-67 DIV_ASSIGN
-68 REM_ASSIGN
-69 SHR_ASSIGN
-70 SHL_ASSIGN
-71 BAN_ASSIGN
-72 BOR_ASSIGN
-73 BXO_ASSIGN
-74 INC_ASSIGN
-75 DEC_ASSIGN
+71 Cast to bool
+72 Cast to char
+73 Cast to int
+74 Cast to float
+75 Cast to string
 
-71 cout string string
+81 EQL_ASSIGN
+82 ADD_ASSIGN
+83 SUB_ASSIGN
+84 MUL_ASSIGN
+85 DIV_ASSIGN
+86 REM_ASSIGN
+87 SHR_ASSIGN
+88 SHL_ASSIGN
+89 BAN_ASSIGN
+90 BOR_ASSIGN
+91 BXO_ASSIGN
+92 INC_ASSIGN
+93 DEC_ASSIGN
 
-80 IDENT (name=endl, address=-1)
-82 BOOL_LIT
-83 INT_LIT
-84 FLOAT_LIT
-85 STR_LIT
+101 cout string string
 
-
-
+110 IDENT (name=endl, address=-1)
+112 BOOL_LIT
+113 INT_LIT
+114 FLOAT_LIT
+115 STR_LIT
 
 Index     Name                Type      Addr      Lineno    Func_sig  
 0         argv                string    0         1         -         

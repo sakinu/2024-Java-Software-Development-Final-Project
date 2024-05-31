@@ -56,8 +56,63 @@ BAN_ASSIGN
 IDENT (name=x, address=1)
 IDENT (name=endl, address=-1)
 cout int string
-INT_LIT 0
-RETURN
+FLOAT_LIT 3.140000
+> Insert `yy` (addr: 2) to scope level 1
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+IDENT (name=yy, address=2)
+FLOAT_LIT 10.400000
+EQL_ASSIGN
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+IDENT (name=yy, address=2)
+FLOAT_LIT 2.000000
+ADD_ASSIGN
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+IDENT (name=yy, address=2)
+FLOAT_LIT 3.000000
+SUB_ASSIGN
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+IDENT (name=yy, address=2)
+FLOAT_LIT 4.000000
+MUL_ASSIGN
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+IDENT (name=yy, address=2)
+FLOAT_LIT 5.000000
+DIV_ASSIGN
+IDENT (name=yy, address=2)
+IDENT (name=endl, address=-1)
+cout float string
+STR_LIT ""
+> Insert `s` (addr: 3) to scope level 1
+IDENT (name=s, address=3)
+IDENT (name=endl, address=-1)
+cout string string
+IDENT (name=s, address=3)
+STR_LIT "Hello"
+EQL_ASSIGN
+IDENT (name=s, address=3)
+IDENT (name=endl, address=-1)
+cout string string
+BOOL_LIT FALSE
+> Insert `bbb` (addr: 4) to scope level 1
+IDENT (name=bbb, address=4)
+IDENT (name=endl, address=-1)
+cout bool string
+IDENT (name=bbb, address=4)
+BOOL_LIT TRUE
+EQL_ASSIGN
+IDENT (name=bbb, address=4)
+IDENT (name=endl, address=-1)
+cout bool string
 
 > Dump symbol table (scope level: 1)
 Index     Name                Type      Addr      Lineno    Func_sig  

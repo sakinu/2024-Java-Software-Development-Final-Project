@@ -5,12 +5,7 @@ import java.math.BigDecimal;
 
 public class Test {
     public static void main(String[] argv) {
-        Integer[] arr = new Integer[5];
-        for(int i=0;i<5;i++) arr[i] = 0;
-        f(arr);
-        for(int i=0;i<5;i++) System.out.println(arr[i]);
-    }
-    static void f(Integer arr[]) {
-        for(int i=0; i<arr.length; i++) arr[i] = 5;
+        String x = "37.6";
+        System.out.println((int)Math.ceil(Float.parseFloat(x)));
     }
 }
