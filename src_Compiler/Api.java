@@ -85,7 +85,7 @@ public class Api {
         Boolean ret = null;
         switch (nowType) {
             case 1:
-                ret = Boolean.valueOf(nowVal);
+                ret = nowVal != "0";
                 break;
             // case 2:
             //     ret = String.valueOf(strVal.charAt(0));
@@ -237,7 +237,7 @@ public class Api {
         return Integer.valueOf(Tokens[6].substring(0, Tokens[6].length()-1));
     }
 
-    static int getLineType(int lineId, String[] Tokens) {
+    static int getLineType(Integer lineId, String[] Tokens) {
         if(Tokens.length == 0 || Tokens.length == 1 && Tokens[0].isEmpty()) return 0;
         if(Tokens[0].equals(">")) {
             if(Tokens[1].equals("Create")) {
@@ -265,6 +265,15 @@ public class Api {
         }
         if(Tokens[0].equals("IF")) {
             return 21;
+        }
+        if(Tokens[0].equals("ELSE")) {
+            return 23;
+        }
+        if(Tokens[0].equals("WHILE")) {
+            return 25;
+        }
+        if(Tokens[0].equals("for")) {
+            return 27;
         }
 
         if(Tokens[0].equals("NOT")) {

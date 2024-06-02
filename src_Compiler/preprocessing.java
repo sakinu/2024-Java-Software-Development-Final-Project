@@ -1,20 +1,22 @@
 package src_Compiler;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeMap;
 
 public class Preprocessing {
-    static private HashMap<Integer, Integer> endTable = new HashMap<>();
-    static private HashMap<Integer, Integer> end2Table = new HashMap<>();
-    static private HashMap<String, Function> funcTable = new HashMap<>();
+    static private Map<Integer, Integer> endTable = new TreeMap<>();
+    static private Map<Integer, Integer> end2Table = new TreeMap<>();
+    static private Map<String, Function> funcTable = new TreeMap<>();
     static private List<Term> IdentTable = new ArrayList<>();
 
     static void init(int totalLines, String[] lines, String[][] lineTokens) {
         Stack<Integer> startStack = new Stack<>();
+        List<Integer> list = new ArrayList<>();
         for(int lineId=0; lineId<totalLines; lineId++) {
             if(Api.getLineType(lineId, lineTokens[lineId]) == 1) {
                 startStack.push(lineId);
@@ -22,12 +24,20 @@ public class Preprocessing {
             if(Api.getLineType(lineId, lineTokens[lineId]) == 2) {
                 endTable.put(startStack.peek(), lineId);
                 lineId += 2;
-                while(lineId < totalLines && Api.isNumber(lineTokens[lineId][0])){
+                while(lineId < totalLines && Api.getLineType(lineId, lineTokens[lineId]) == 8){
                     lineId++;
                 }
-                end2Table.put(startStack.peek(), lineId);
+                end2Table.put(startStack.peek(), lineId-1);
                 startStack.pop();
             }
+        }
+
+        for(var key : endTable.keySet()) {
+            System.out.println(key + " " + endTable.get(key));
+        }
+        System.out.println();
+        for(var key : end2Table.keySet()) {
+            System.out.println(key + " " + end2Table.get(key));
         }
 
         for(int lineId = 0; lineId < totalLines; lineId++) {

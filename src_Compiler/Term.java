@@ -42,10 +42,15 @@ public class Term {
         // ObjVal.setVal(this.val);
     }
 
-    void print() {
+    void myprint() {
         System.out.printf(",%b, %s, %d, %s, \n", isIdent, IdentName, valType, val);
     }
-
+    void setIsIdent(boolean isIdent) {
+        this.isIdent = isIdent;
+    }
+    void setName(String name) {
+        this.IdentName = name;
+    }
     void setVal(String val) {
         this.val = val;
         // ObjVal.setVal(this.val);
@@ -71,25 +76,31 @@ public class Term {
     //     return ObjVal.getVal();
     // }
 
-    void converSelfType() {
-        if(!isIdent) return;
-        switch (this.valType) {
-            case 1:
-                this.val = String.valueOf(Api.converBool(this));
-                break;
-            case 3:
-                this.val = String.valueOf(Api.converInt(this));
-                break;
-            case 4:
-                this.val = String.valueOf(Api.converFloat(this));
-                break;
-            case 5:
-                this.val = Api.converString(this);
-                break;
-            default:
-                System.out.println("WTF converSelfType");
-                break;
-        }
+    // void converSelfType() {
+    //     if(!isIdent) return;
+    //     switch (this.valType) {
+    //         case 1:
+    //             this.val = String.valueOf(Api.converBool(this));
+    //             break;
+    //         case 3:
+    //             this.val = String.valueOf(Api.converInt(this));
+    //             break;
+    //         case 4:
+    //             this.val = String.valueOf(Api.converFloat(this));
+    //             break;
+    //         case 5:
+    //             this.val = Api.converString(this);
+    //             break;
+    //         default:
+    //             System.out.println("WTF converSelfType");
+    //             break;
+    //     }
+    // }
+
+    void checkBoolStr() {
+        if(this.valType != 1) return;
+        if(this.val == "true") this.val = "1";
+        if(this.val == "false") this.val = "0";
     }
 
     void NOT() {
@@ -251,20 +262,20 @@ public class Term {
         }
         if(term1.valType == 5){
             if(term2.valType != 5){
-                System.out.println("WTF LEQ");
+                System.out.println("WTF EQL");
             }
             retVal = term1.equals(term2) ? "1" : "0";
         }
         int mxType = Math.max(this.getType(),otherTerm.getType());
         switch(mxType) {
             case 1:
-                retVal = String.valueOf(Api.converBool(term1) == Api.converBool(otherTerm));
+                retVal = Api.converBool(term1) == Api.converBool(otherTerm) ? "1" : "0";
                 break;
             case 3:
-                retVal = String.valueOf(Api.converInt(term1) == Api.converInt(otherTerm));
+                retVal = Api.converInt(term1) == Api.converInt(otherTerm) ? "1" : "0";
                 break;
             case 4:
-                retVal = String.valueOf(Api.converFloat(term1) == Api.converFloat(otherTerm));
+                retVal = Api.converFloat(term1) == Api.converFloat(otherTerm) ? "1" : "0";
                 break;
             default:
                 System.out.println("WTF MUL");
@@ -275,7 +286,7 @@ public class Term {
     }
     void NEQ(Term otherTerm) {
         this.EQL(otherTerm);
-        this.val = String.valueOf(!Boolean.valueOf(this.val));
+        this.val = (this.val == "1") ? "0" : "1";
     }
     void BAN(Term otherTerm) {
         this.val = String.valueOf(Api.converInt(this) & Api.converInt(otherTerm));
@@ -290,12 +301,12 @@ public class Term {
         this.valType = 3;
     }
     void LAN(Term otherTerm) {
-        this.val = String.valueOf(Api.converBool(this) && Api.converBool(otherTerm));
+        this.val = (Api.converBool(this) && Api.converBool(otherTerm))  ? "1" : "0";
         this.valType = 1;
         // ObjVal.setVal(this.val);
     }
     void LOR(Term otherTerm) {
-        this.val = String.valueOf(Api.converBool(this) || Api.converBool(otherTerm));
+        this.val = (Api.converBool(this) || Api.converBool(otherTerm)) ? "1" : "0";
         this.valType = 1;
         // ObjVal.setVal(this.val);
     }

@@ -7,6 +7,7 @@ public class RunState {                    //for遞迴
     private int startLine;
     private int endLine;
     private int nowLine;
+    private String runType;
     private Stack<Term> TermStack;
     private HashMap<String, Term> symbolTable;
     
@@ -15,6 +16,7 @@ public class RunState {                    //for遞迴
         this.startLine = startLine;
         this.endLine = endLine;
         this.nowLine = nowLine;
+        this.runType = null;
         this.TermStack = new Stack<Term>();
         this.symbolTable = new HashMap<>();
     }
@@ -24,15 +26,16 @@ public class RunState {                    //for遞迴
         this.startLine = function.getStart();
         this.endLine = function.getEnd();
         this.nowLine = this.startLine;
+        this.runType = null;
         this.TermStack = new Stack<Term>();
         this.symbolTable = new HashMap<String,Term>();
     }
 
-    void print() {
+    void myprint() {
         System.out.printf("Name = %s, nowLine = %d ", Name, nowLine);
         System.out.printf("termStack = \n");
         for(Term term : TermStack) {
-            term.print();
+            term.myprint();
         }
     }
 
@@ -50,6 +53,10 @@ public class RunState {                    //for遞迴
 
     void setLine(int line) {
         nowLine = line;
+    }
+
+    void setRunType(String runType) {
+        this.runType = runType;
     }
 
     boolean isEndLine() {
@@ -72,12 +79,16 @@ public class RunState {                    //for遞迴
         return TermStack.pop();
     }
 
-    void updIdent(String IdentName, Term term) {
+    void updateIdent(String IdentName, Term term) {
         symbolTable.put(IdentName, term);
     }
 
     boolean noTerm() {
         return TermStack.isEmpty();
+    }
+
+    Stack<Term> getTermStack() {
+        return TermStack;
     }
 
     String getCout() {
@@ -109,5 +120,9 @@ public class RunState {                    //for遞迴
             }
         }
         return null;
+    }
+
+    String getRunType() {
+        return this.runType;
     }
 }

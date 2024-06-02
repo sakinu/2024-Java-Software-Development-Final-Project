@@ -3,40 +3,20 @@
 using namespace std;
 
 int main(int argc, char **argv) {
-    int a = 0,b = 0,c = 10;
-    if( a == 0 && b == 0 ) {
-        cout << a << b << c << endl;
+    int a = 0, b = 0, c = 10;
+    while( c != 0 ) {
+        c -= 1;
+        cout << 0 << "\n";
     }
-
-    if( c - b >= 0 ) {
-        cout << "OK!" << endl;
+    while( (a) == 0 || (b) == 0 || ( a == 0 || b == 10 || c == 0 ) ) {
+        a -= 1;
+        b -= 1;
+        c -= 1;
+        cout << 1 << "\n";
     }
-
-    if( ( a == 0 && b != 0 ) || c == 10 ) {
-        cout << "test1" << endl;
-    }
-    else {
-        if( ( c == 10 || a != 0 ) && ( ( a == 0 && b == 0 && c == 0 && ( c == 10 || (a) == 0 ) ) ) ) {
-            cout << "test2" << endl;
-        }
-        else {
-            cout << "test3" << endl;
-            if(true) {
-                cout << "test4" << endl;
-            }
-        }
-    }
-
-    if(true){
-        cout << "test6" << endl;
-    }
-
     return 0;
 }
 
 /*
-_0__0__10__
-__OK!__
-__test1__
-__test3__
+
 */

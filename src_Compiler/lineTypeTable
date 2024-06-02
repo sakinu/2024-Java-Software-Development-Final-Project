@@ -9,7 +9,11 @@
 13 RETURN
 
 21 IF
-22 ELSE
+22 ELSE IF
+23 ELSE
+
+25 while
+27 for
 
 31 NOT
 32 BNT

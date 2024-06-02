@@ -31,7 +31,7 @@ public class Function {
         System.out.printf("printFuction %s %d %d %d\n", name, startLine, endLine, returnType);
         System.out.print("Parameters:");
         for(Term term : Parameters) {
-            term.print();
+            term.myprint();
         }
         System.out.println();
     }
