@@ -68,7 +68,7 @@ public class test {
 	        {"RETURN", "return"},
 	        {"BREAK", "break"},
 	        {"BOOL_LIT", "true|false"},
-	        
+	        {"CHAR_LIT", "'(\\\\.|[^'])'"},
 	        {"IDENT", "[a-zA-Z_][a-zA-Z0-9_]*"},
 	        {"FLOAT_LIT", "\\d+\\.\\d+"},
 	        {"INT_LIT", "\\d+"},
@@ -106,13 +106,15 @@ public class test {
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                	else if(tokenInfo[0].equals("MULTI_COMMENT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
-	                    else if(tokenInfo[0].equals("IDENT"))
-	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("FLOAT_LIT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("INT_LIT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
+	                    else if(tokenInfo[0].equals("CHAR_LIT"))
+	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("STRING_LIT"))
+	                		System.out.println(tokenInfo[0] + "\t" + token);
+	                    else if(tokenInfo[0].equals("IDENT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if (!tokenInfo[0].equals("WHITESPACE") ) {
 	                        System.out.println(tokenInfo[0]);
