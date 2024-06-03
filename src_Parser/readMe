@@ -1,0 +1,4 @@
+Func = Function
+Stmt = Statement
+Def = Definition
+Parm = Parameter
