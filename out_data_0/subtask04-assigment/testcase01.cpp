@@ -1,0 +1,253 @@
+INT_T
+IDENT main
+'('
+STR_T
+IDENT argv
+'['
+']'
+')'
+'{'
+INT_T
+IDENT x
+VAL_ASSIGN
+INT_LIT 0
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+VAL_ASSIGN
+INT_LIT 10
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+ADD
+VAL_ASSIGN
+INT_LIT 2
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+SUB
+VAL_ASSIGN
+INT_LIT 3
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+MUL
+VAL_ASSIGN
+INT_LIT 4
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+DIV
+VAL_ASSIGN
+INT_LIT 5
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+MOD
+VAL_ASSIGN
+INT_LIT 6
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+BOR
+VAL_ASSIGN
+INT_LIT 4092
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+IDENT x
+BAN
+VAL_ASSIGN
+INT_LIT 255
+';'
+COUT
+SHL
+'('
+IDENT x
+')'
+SHL
+IDENT endl
+';'
+FLOAT_T
+IDENT yy
+VAL_ASSIGN
+FLOAT_LIT 3.14
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+IDENT yy
+VAL_ASSIGN
+FLOAT_LIT 10.4
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+IDENT yy
+ADD
+VAL_ASSIGN
+FLOAT_LIT 2.0
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+IDENT yy
+SUB
+VAL_ASSIGN
+FLOAT_LIT 3.0
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+IDENT yy
+MUL
+VAL_ASSIGN
+FLOAT_LIT 4.0
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+IDENT yy
+DIV
+VAL_ASSIGN
+FLOAT_LIT 5.0
+';'
+COUT
+SHL
+'('
+IDENT yy
+')'
+SHL
+IDENT endl
+';'
+STR_T
+IDENT s
+VAL_ASSIGN
+STRING_LIT ""
+';'
+COUT
+SHL
+'('
+IDENT s
+')'
+SHL
+IDENT endl
+';'
+IDENT s
+VAL_ASSIGN
+STRING_LIT "Hello"
+';'
+COUT
+SHL
+'('
+IDENT s
+')'
+SHL
+IDENT endl
+';'
+BOOL_T
+IDENT bbb
+VAL_ASSIGN
+BOOL_LIT false
+';'
+COUT
+SHL
+'('
+IDENT bbb
+')'
+SHL
+IDENT endl
+';'
+IDENT bbb
+VAL_ASSIGN
+BOOL_LIT true
+';'
+COUT
+SHL
+'('
+IDENT bbb
+')'
+SHL
+IDENT endl
+';'
+'}'

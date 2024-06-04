@@ -1,0 +1,62 @@
+INT_T
+IDENT main
+'('
+STR_T
+IDENT argv
+'['
+']'
+')'
+'{'
+INT_T
+IDENT c
+VAL_ASSIGN
+INT_LIT 10
+';'
+FOR
+'('
+INT_T
+IDENT i
+VAL_ASSIGN
+INT_LIT 0
+';'
+IDENT i
+LES
+IDENT c
+';'
+IDENT i
+ADD
+ADD
+')'
+'{'
+COUT
+SHL
+STRING_LIT "Hello world"
+SHL
+IDENT endl
+';'
+'}'
+FOR
+'('
+';'
+IDENT c
+GTR
+VAL_ASSIGN
+INT_LIT 0
+';'
+IDENT c
+SUB
+VAL_ASSIGN
+INT_LIT 1
+')'
+'{'
+COUT
+SHL
+STRING_LIT "apple!"
+SHL
+IDENT endl
+';'
+'}'
+RETURN
+INT_LIT 0
+';'
+'}'

@@ -1,0 +1,19 @@
+INT_T
+IDENT main
+'('
+STR_T
+IDENT argv
+'['
+']'
+')'
+'{'
+COUT
+SHL
+STRING_LIT "Hello World"
+SHL
+IDENT endl
+';'
+RETURN
+INT_LIT 0
+';'
+'}'

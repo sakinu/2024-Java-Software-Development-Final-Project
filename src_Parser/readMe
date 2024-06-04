@@ -2,3 +2,10 @@ Func = Function
 Stmt = Statement
 Def = Definition
 Parm = Parameter
+Expn = Expression
+
+S_ = Syntax
+T_ = Terminal
+D_ = Do something
+
+每個語意，要知道自己每個可能的右界在哪裡
