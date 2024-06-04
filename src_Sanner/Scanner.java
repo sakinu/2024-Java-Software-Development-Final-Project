@@ -1,36 +1,19 @@
-package test;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class test {
+public class Scanner {
 	private static final String[][] TOKENS = {
 			{"COMMENT", "//.*"},
 	        {"MULTI_COMMENT", "/\\*[^*]*(?:\\*(?!/)[^*]*)*\\*/"},
-	        {"SHR", ">>"},
-	        {"SHL", "<<"},
-	        {"BAN", "\\&"},
-	        {"BOR", "\\|"},
-	        {"BNT", "\\~"},
-	        {"BXO", "\\^"},
-	        {"ADD", "\\+"},
-	        {"SUB", "\\-"},
-	        {"MUL", "\\*"},
-	        {"DIV", "\\/"},
-	        {"MOD", "%"},
-	        {"NOT", "!"},
-	        {"GTR", ">"},
-	        {"LES", "<"},
 	        {"GEQ", ">="},
 	        {"LEQ", "<="},
 	        {"EQL", "=="},
 	        {"NEQ", "!="},
 	        {"LAN", "&&"},
 	        {"LOR", "\\|\\|"},
-	        {"VAL_ASSIGN", "="},
 	        {"ADD_ASSIGN", "\\+="},
 	        {"SUB_ASSIGN", "\\-="},
 	        {"MUL_ASSIGN", "\\*="},
@@ -42,6 +25,21 @@ public class test {
 	        {"BOR_ASSIGN", "\\|="},
 	        {"INC_ASSIGN", "\\+\\+"},
 	        {"DEC_ASSIGN", "\\-\\-"},
+	        {"SHR", ">>"},
+	        {"SHL", "<<"},
+	        {"MOD", "%"},
+	        {"NOT", "!"},
+	        {"GTR", ">"},
+	        {"LES", "<"},
+	        {"BAN", "\\&"},
+	        {"BOR", "\\|"},
+	        {"BNT", "\\~"},
+	        {"BXO", "\\^"},
+	        {"ADD", "\\+"},
+	        {"SUB", "\\-"},
+	        {"MUL", "\\*"},
+	        {"DIV", "\\/"},
+	        {"VAL_ASSIGN", "="},
 	        {"'('", "\\("},
 	        {"')'", "\\)"},
 	        {"'['", "\\["},
@@ -103,19 +101,19 @@ public class test {
 	                	if (tokenInfo[0].equals("BOOL_LIT")) 
 	                        System.out.println(tokenInfo[0] + "\t" + token);
 	                	else if(tokenInfo[0].equals("COMMENT"))
-	                		System.out.println(tokenInfo[0] + "\t" + token);
+	                		System.out.println(tokenInfo[0] + "\t\t" + token);
 	                	else if(tokenInfo[0].equals("MULTI_COMMENT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("FLOAT_LIT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("INT_LIT"))
-	                		System.out.println(tokenInfo[0] + "\t" + token);
+	                		System.out.println(tokenInfo[0] + "\t\t" + token);
 	                    else if(tokenInfo[0].equals("CHAR_LIT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("STRING_LIT"))
 	                		System.out.println(tokenInfo[0] + "\t" + token);
 	                    else if(tokenInfo[0].equals("IDENT"))
-	                		System.out.println(tokenInfo[0] + "\t" + token);
+	                		System.out.println(tokenInfo[0] + "\t\t" + token);
 	                    else if (!tokenInfo[0].equals("WHITESPACE") ) {
 	                        System.out.println(tokenInfo[0]);
 	                    }
