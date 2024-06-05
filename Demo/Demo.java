@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class Demo {
     static String[][][] paths = Reader.getFilePathList("data_0");
@@ -70,6 +71,15 @@ public class Demo {
         try {
             ProcessBuilder builder = new ProcessBuilder("java", javaPath, folderPath, filePath);
             Process process = builder.start();
+
+            // if(javaPath.equals("src_Parser/Final_Parser")) {
+            //     try {
+            //         TimeUnit.SECONDS.sleep(1);
+            //     } catch (Exception e) {
+            //         System.out.println(e);
+            //     }
+            // }
+
             int exitCode = process.waitFor();
             // System.out.println("java：" + exitCode);
         } catch (IOException | InterruptedException e) {

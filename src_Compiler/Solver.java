@@ -9,11 +9,9 @@ public class Solver {           //找出所有function，載入main
     private int totalLines;
     private String[] lines;
     private String[][] lineTokens;
-    // private List<Term> IdentTable;              //用addrs去知道自己的資料
-    // private HashMap<String, Function> funcTable;             //function
 
     private StringBuilder coutput = new StringBuilder("");
-    private Stack<Stack<RunState>> runStack;            //一維：無相互依賴如func  二維：有相互依賴如if
+    private Stack<Stack<RunState>> runStack;
     private Stack<Term> termStack;
 
     Solver(String[] inputLines) {

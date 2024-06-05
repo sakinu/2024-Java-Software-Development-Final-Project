@@ -1,1 +1,32 @@
-false
+0 ~ 16 is Program
+0 ~ 16 is GlobalStmtList
+0 ~ 16 is GlobalStmt
+0 ~ 16 is FuncDefStmt
+0 ~ 0 is VARIABLE_T
+1 ~ 1 is IDENT
+2 ~ 2 is (
+3 ~ 3 is )
+4 ~ 4 is {
+5 ~ 15 is StmtList
+5 ~ 12 is Stmt
+5 ~ 5 is Cout
+6 ~ 11 is CoutStmtList
+6 ~ 6 is SHL
+7 ~ 7 is Expn
+7 ~ 7 is Term
+8 ~ 11 is CoutStmtList
+8 ~ 8 is SHL
+9 ~ 9 is Expn
+9 ~ 9 is Term
+10 ~ 11 is CoutStmtList
+10 ~ 10 is SHL
+11 ~ 11 is Expn
+11 ~ 11 is Term
+12 ~ 12 is ;
+13 ~ 15 is StmtList
+13 ~ 15 is Stmt
+13 ~ 13 is RETURN
+14 ~ 14 is Term
+15 ~ 15 is ;
+16 ~ 16 is }
+true

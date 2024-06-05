@@ -17,6 +17,9 @@ NEQ
 IDENT (name=c, address=3)
 INT_LIT 1
 SUB_ASSIGN
+IDENT (name=a, address=1)
+IDENT (name=endl, address=-1)
+cout int string
 
 > Dump symbol table (scope level: 2)
 Index     Name                Type      Addr      Lineno    Func_sig  
@@ -50,6 +53,9 @@ SUB_ASSIGN
 IDENT (name=c, address=3)
 INT_LIT 1
 SUB_ASSIGN
+IDENT (name=a, address=1)
+IDENT (name=endl, address=-1)
+cout int string
 
 > Dump symbol table (scope level: 2)
 Index     Name                Type      Addr      Lineno    Func_sig  

@@ -23,6 +23,12 @@ NEQ
 INT_LIT		0
 ')'
 '{'
+COUT
+SHL
+IDENT		c
+SHL
+IDENT		endl
+';'
 IDENT		c
 SUB_ASSIGN
 INT_LIT		1
@@ -68,6 +74,12 @@ INT_LIT		1
 IDENT		c
 SUB_ASSIGN
 INT_LIT		1
+';'
+COUT
+SHL
+IDENT		a
+SHL
+IDENT		endl
 ';'
 '}'
 RETURN

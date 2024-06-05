@@ -118,7 +118,7 @@ public class Api {
         Integer ret = null;
         switch (nowType) {
             case 1:
-                if(nowVal.equals("0") || nowVal.equals("0") || nowVal.equals("-0"))
+                if(nowVal.equals("0") || nowVal.equals("-0"))
                     ret = 0;
                 else
                     ret = 1;

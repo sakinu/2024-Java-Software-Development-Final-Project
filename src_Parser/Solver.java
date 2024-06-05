@@ -89,18 +89,19 @@ public class Solver {
 
     static boolean parse(int dep, int left, int right, String SyntaxName) {             //l~r能否符合語意
         // System.out.println("\ninto parse " + dep + " " + left + "," + right + " " + SyntaxName);
-        if(counter++ > 1000) {
+        if(hasKey(SyntaxName, left, right)) {
+            // System.out.println("\ninto parse " + dep + " " + left + "," + right + " " + SyntaxName);
+            // System.out.println("dp vis");
+            return dp.get(SyntaxName).get(left).get(right).getIsOk();
+        }
+        counter += 10;
+        if(counter > 1000000) {
             System.out.println("counter >");
             return false;
         }
         if(left > right) {
             // System.out.println("l > r");
             return false;
-        }
-        if(hasKey(SyntaxName, left, right)) {
-            // System.out.println("\ninto parse " + dep + " " + left + "," + right + " " + SyntaxName);
-            // System.out.println("dp vis");
-            return dp.get(SyntaxName).get(left).get(right).getIsOk();
         }
         boolean ok = false;
         System.out.println(SyntaxName);
@@ -117,7 +118,8 @@ public class Solver {
                         posStack[j] = left-1+j;
                     }
                     while(true) {           //加上一個東西，找他最右邊，如果不能再右，就讓左邊加一
-                        if(counter++ > 1000) {
+                        if(counter++ > 1000000) {
+                            System.out.println("counter2 >");
                             break;
                         }
                         if(posStack[TableSize] == right) {

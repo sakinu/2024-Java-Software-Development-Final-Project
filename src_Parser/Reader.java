@@ -11,6 +11,7 @@ public class Reader {
     static String[][] read(String[] argv) {
         // String filePath = "src_Parser/test.cpp";
         String filePath = argv[0] + argv[1];
+        // String filePath = "src_Parser/test.cpp";
         System.out.println("read " + filePath);
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             List<String> lines = new ArrayList<>();
