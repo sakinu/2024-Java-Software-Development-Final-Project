@@ -66,7 +66,7 @@ public class Term {
     String getName() {
         return this.IdentName;
     }
-    int getType() {
+    Integer getType() {
         return valType;
     }
     String getVal() {

@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     auto x = 6.0;
     auto y = true;
 

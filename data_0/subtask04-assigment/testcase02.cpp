@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int a,b,c,d,e;
     a = ~243 & 15;
     b = a >> 1;

@@ -1,253 +1,238 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT x
+IDENT		x
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
+IDENT		x
 VAL_ASSIGN
-INT_LIT 10
+INT_LIT		10
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-ADD
-VAL_ASSIGN
-INT_LIT 2
+IDENT		x
+ADD_ASSIGN
+INT_LIT		2
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-SUB
-VAL_ASSIGN
-INT_LIT 3
+IDENT		x
+SUB_ASSIGN
+INT_LIT		3
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-MUL
-VAL_ASSIGN
-INT_LIT 4
+IDENT		x
+MUL_ASSIGN
+INT_LIT		4
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-DIV
-VAL_ASSIGN
-INT_LIT 5
+IDENT		x
+DIV_ASSIGN
+INT_LIT		5
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-MOD
-VAL_ASSIGN
-INT_LIT 6
+IDENT		x
+REM_ASSIGN
+INT_LIT		6
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-BOR
-VAL_ASSIGN
-INT_LIT 4092
+IDENT		x
+BOR_ASSIGN
+INT_LIT		4092
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT x
-BAN
-VAL_ASSIGN
-INT_LIT 255
+IDENT		x
+BAN_ASSIGN
+INT_LIT		255
 ';'
 COUT
 SHL
 '('
-IDENT x
+IDENT		x
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 FLOAT_T
-IDENT yy
+IDENT		yy
 VAL_ASSIGN
-FLOAT_LIT 3.14
+FLOAT_LIT	3.14
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT yy
+IDENT		yy
 VAL_ASSIGN
-FLOAT_LIT 10.4
+FLOAT_LIT	10.4
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT yy
-ADD
-VAL_ASSIGN
-FLOAT_LIT 2.0
+IDENT		yy
+ADD_ASSIGN
+FLOAT_LIT	2.0
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT yy
-SUB
-VAL_ASSIGN
-FLOAT_LIT 3.0
+IDENT		yy
+SUB_ASSIGN
+FLOAT_LIT	3.0
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT yy
-MUL
-VAL_ASSIGN
-FLOAT_LIT 4.0
+IDENT		yy
+MUL_ASSIGN
+FLOAT_LIT	4.0
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT yy
-DIV
-VAL_ASSIGN
-FLOAT_LIT 5.0
+IDENT		yy
+DIV_ASSIGN
+FLOAT_LIT	5.0
 ';'
 COUT
 SHL
 '('
-IDENT yy
+IDENT		yy
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 STR_T
-IDENT s
+IDENT		s
 VAL_ASSIGN
-STRING_LIT ""
+STRING_LIT	""
 ';'
 COUT
 SHL
 '('
-IDENT s
+IDENT		s
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT s
+IDENT		s
 VAL_ASSIGN
-STRING_LIT "Hello"
+STRING_LIT	"Hello"
 ';'
 COUT
 SHL
 '('
-IDENT s
+IDENT		s
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 BOOL_T
-IDENT bbb
+IDENT		bbb
 VAL_ASSIGN
-BOOL_LIT false
+BOOL_LIT	false
 ';'
 COUT
 SHL
 '('
-IDENT bbb
+IDENT		bbb
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT bbb
+IDENT		bbb
 VAL_ASSIGN
-BOOL_LIT true
+BOOL_LIT	true
 ';'
 COUT
 SHL
 '('
-IDENT bbb
+IDENT		bbb
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'

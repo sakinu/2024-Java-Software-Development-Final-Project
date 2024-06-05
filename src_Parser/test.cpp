@@ -1,21 +1,15 @@
 INT_T
 IDENT    	 main
 '('
-STR_T
-IDENT    	 argv
-// '['
-// ']'
 ')'
 '{'
-// COUT
-// SHL
-// STRING_LIT 	 "Hello World"
-// SHL
-// IDENT    	 endl
-// ';'
+COUT
+SHL
+STRING_LIT 	 "Hello World"
+SHL
+IDENT    	 endl
+';'
 RETURN
-// INT_LIT  	 0
-// ';'
+INT_LIT  	 0
+';'
 '}'
-
-// Total line: 4

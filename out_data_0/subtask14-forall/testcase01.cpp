@@ -1,263 +1,255 @@
 INT_T
-IDENT mod
+IDENT		mod
 '('
 INT_T
-IDENT num
+IDENT		num
 ','
 INT_T
-IDENT mod
+IDENT		mod
 ')'
 '{'
 IF
 '('
-IDENT num
+IDENT		num
 LES
-INT_LIT 0
+INT_LIT		0
 ')'
 RETURN
 '('
-IDENT num
+IDENT		num
 ADD
 '('
-IDENT num
+IDENT		num
 MUL
 SUB
-INT_LIT 1
+INT_LIT		1
 DIV
-IDENT mod
+IDENT		mod
 ADD
-INT_LIT 1
+INT_LIT		1
 ')'
 MUL
-IDENT mod
+IDENT		mod
 ')'
 ';'
-COMMENT // cool!
+COMMENT		// cool!
 RETURN
-IDENT num
+IDENT		num
 MOD
-IDENT mod
+IDENT		mod
 ';'
 '}'
 VOID_T
-IDENT nothing_function
+IDENT		nothing_function
 '('
 STR_T
-IDENT s
+IDENT		s
 ')'
 '{'
 COUT
 SHL
-IDENT s
+IDENT		s
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT mod
+IDENT		mod
 '('
-INT_LIT 10000000007
+INT_LIT		10000000007
 ','
-INT_LIT 99824353
+INT_LIT		99824353
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
-COMMENT // very big number!
+COMMENT		// very big number!
 COUT
 SHL
-IDENT mod
+IDENT		mod
 '('
 SUB
-INT_LIT 10
+INT_LIT		10
 ','
-INT_LIT 2
+INT_LIT		2
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 RETURN
 ';'
 '}'
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
-IDENT nothing_function
+IDENT		nothing_function
 '('
-STRING_LIT "Hello world"
+STRING_LIT	"Hello world"
 ')'
 ';'
-COMMENT // comment
-MULTI_COMMENT /*
+COMMENT		// comment
+MULTI_COMMENT	/*
 multi comment
     Tab \t
     Space
 * star *
 */
-MULTI_COMMENT /**
+MULTI_COMMENT	/**
  * Cool multi comment
  */
-MULTI_COMMENT /*Flowing multi comment*/
-COMMENT //Flowing comment
+MULTI_COMMENT	/*Flowing multi comment*/
+COMMENT		//Flowing comment
 INT_T
-IDENT apple
+IDENT		apple
 VAL_ASSIGN
-INT_LIT 99824353
+INT_LIT		99824353
 ';'
-IDENT nothing_function
+IDENT		nothing_function
 '('
-STRING_LIT "apple!"
+STRING_LIT	"apple!"
 ')'
 ';'
 IF
 '('
-IDENT mod
+IDENT		mod
 '('
-IDENT apple
+IDENT		apple
 ','
-INT_LIT 2
+INT_LIT		2
 ')'
 MOD
-INT_LIT 2
+INT_LIT		2
 EQL
-INT_LIT 1
+INT_LIT		1
 ')'
 '{'
 IF
 '('
-IDENT apple
+IDENT		apple
 EQL
-INT_LIT 998244353
+INT_LIT		998244353
 ')'
 '{'
 FOR
 '('
 INT_T
-IDENT i
+IDENT		i
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT i
+IDENT		i
 LES
-INT_LIT 10
+INT_LIT		10
 ';'
-IDENT i
-ADD
-VAL_ASSIGN
-INT_LIT 1
+IDENT		i
+ADD_ASSIGN
+INT_LIT		1
 ')'
 '{'
-MULTI_COMMENT /* for loop */
+MULTI_COMMENT	/* for loop */
 INT_T
-IDENT q
+IDENT		q
 VAL_ASSIGN
-INT_LIT 10
+INT_LIT		10
 ';'
 WHILE
 '('
-IDENT q
+IDENT		q
 NEQ
-INT_LIT 0
+INT_LIT		0
 ')'
-MULTI_COMMENT /* while loop */
+MULTI_COMMENT	/* while loop */
 '{'
-IDENT q
-SUB
-VAL_ASSIGN
-INT_LIT 1
+IDENT		q
+SUB_ASSIGN
+INT_LIT		1
 ';'
 COUT
 SHL
-STRING_LIT "OK!"
+STRING_LIT	"OK!"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'
 FOR
 '('
 INT_T
-IDENT i
+IDENT		i
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT i
+IDENT		i
 LES
-INT_LIT 20
+INT_LIT		20
 ';'
-IDENT i
-ADD
-VAL_ASSIGN
-INT_LIT 2
+IDENT		i
+ADD_ASSIGN
+INT_LIT		2
 ')'
 '{'
 INT_T
-IDENT q
+IDENT		q
 VAL_ASSIGN
-IDENT mod
+IDENT		mod
 '('
-IDENT apple
+IDENT		apple
 ','
-INT_LIT 2
+INT_LIT		2
 ')'
 ';'
 WHILE
 '('
-IDENT q
+IDENT		q
 GTR
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
-IDENT q
-SUB
-VAL_ASSIGN
-INT_LIT 1
+IDENT		q
+SUB_ASSIGN
+INT_LIT		1
 ';'
 COUT
 SHL
-STRING_LIT "OK!"
+STRING_LIT	"OK!"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'
 '}'
 ELSE
 '{'
-IDENT nothing_function
+IDENT		nothing_function
 '('
-STRING_LIT "something wrong"
+STRING_LIT	"something wrong"
 ')'
 ';'
 '}'
 '}'
 COUT
 SHL
-IDENT mod
+IDENT		mod
 '('
-IDENT apple
+IDENT		apple
 ','
-INT_LIT 2
+INT_LIT		2
 ')'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
-COMMENT // comment
-MULTI_COMMENT /*
+COMMENT		// comment
+MULTI_COMMENT	/*
 multi comment
     Tab \t
     Space
 * star *
 */
-MULTI_COMMENT /**
+MULTI_COMMENT	/**
  * Cool multi comment
  */
-MULTI_COMMENT /*Flowing multi comment*/
-COMMENT //Flowing comment
+MULTI_COMMENT	/*Flowing multi comment*/
+COMMENT		//Flowing comment

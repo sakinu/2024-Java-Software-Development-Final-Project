@@ -94,8 +94,8 @@ public class Preprocessing {
                 for(int i=0; i<parameters.size(); i++) {
                     parameters.get(i).setValType(lineTokens[end + i + 1][2]);
                 }
-                funcTable.put(funcName, new Function(funcName, start, end, funcReturnType.poll(), parameters));
                 lineId = lineId + parameters.size();
+                funcTable.put(funcName, new Function(funcName, start, end, funcReturnType.poll(), parameters));
             }
         }
         for(var key: funcTable.keySet()) {

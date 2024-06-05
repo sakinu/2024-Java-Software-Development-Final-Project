@@ -1,30 +1,26 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 AUTO_T
-IDENT x
+IDENT		x
 VAL_ASSIGN
-FLOAT_LIT 6.0
+FLOAT_LIT	6.0
 ';'
 AUTO_T
-IDENT y
+IDENT		y
 VAL_ASSIGN
-BOOL_LIT true
+BOOL_LIT	true
 ';'
 COUT
 SHL
-IDENT x
+IDENT		x
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT y
+IDENT		y
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'

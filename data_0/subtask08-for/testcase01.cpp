@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int c = 10;
     for(int i=0;i<c;i++) {
         cout << "Hello world" << endl;

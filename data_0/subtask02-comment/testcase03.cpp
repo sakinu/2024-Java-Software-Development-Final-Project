@@ -8,6 +8,6 @@ multi comment
 /**
  * Cool multi comment
  *//*Flowing multi comment*///Flowing comment
-int main(string argv[]) {
+int main() {
     cout << "Hello World!";
 }

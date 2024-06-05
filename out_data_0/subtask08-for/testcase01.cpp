@@ -1,62 +1,55 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT c
+IDENT		c
 VAL_ASSIGN
-INT_LIT 10
+INT_LIT		10
 ';'
 FOR
 '('
 INT_T
-IDENT i
+IDENT		i
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT i
+IDENT		i
 LES
-IDENT c
+IDENT		c
 ';'
-IDENT i
-ADD
-ADD
+IDENT		i
+INC_ASSIGN
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Hello world"
+STRING_LIT	"Hello world"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 FOR
 '('
 ';'
-IDENT c
-GTR
-VAL_ASSIGN
-INT_LIT 0
+IDENT		c
+GEQ
+INT_LIT		0
 ';'
-IDENT c
-SUB
-VAL_ASSIGN
-INT_LIT 1
+IDENT		c
+SUB_ASSIGN
+INT_LIT		1
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "apple!"
+STRING_LIT	"apple!"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

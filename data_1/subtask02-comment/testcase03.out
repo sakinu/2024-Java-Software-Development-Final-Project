@@ -13,10 +13,6 @@ COMMENT  	 //Flowing comment
 INT_T
 IDENT    	 main
 '('
-STR_T
-IDENT    	 argv
-'['
-']'
 ')'
 '{'
 COUT

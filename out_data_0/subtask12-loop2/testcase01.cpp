@@ -1,34 +1,29 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT counter
+IDENT		counter
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
 WHILE
 '('
-IDENT counter
+IDENT		counter
 LES
-INT_LIT 100000
+INT_LIT		100000
 ')'
 '{'
-IDENT counter
-ADD
-VAL_ASSIGN
-INT_LIT 1
+IDENT		counter
+ADD_ASSIGN
+INT_LIT		1
 ';'
 IF
 '('
-IDENT counter
+IDENT		counter
 EQL
-INT_LIT 99999
+INT_LIT		99999
 ')'
 '{'
 BREAK
@@ -36,37 +31,37 @@ BREAK
 '}'
 IF
 '('
-IDENT counter
+IDENT		counter
 MOD
-INT_LIT 91
+INT_LIT		91
 EQL
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Hello World "
+STRING_LIT	"Hello World "
 SHL
-IDENT counter
+IDENT		counter
 MOD
-INT_LIT 91
+INT_LIT		91
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 COUT
 SHL
-INT_LIT 998244353
+INT_LIT		998244353
 MOD
-IDENT counter
+IDENT		counter
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 COUT
 SHL
-IDENT counter
+IDENT		counter
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'

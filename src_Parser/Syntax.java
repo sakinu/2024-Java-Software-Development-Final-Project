@@ -19,31 +19,34 @@ public class Syntax {
             {"S_FuncDefStmt"}
         });
         put("S_FuncDefStmt", new String[][]{
+            {"T_VARIABLE_T", "T_IDENT", "T_(", "T_)", "T_{", "S_StmtList" , "T_}"},
             {"T_VARIABLE_T", "T_IDENT", "T_(", "S_FuncParmStmtList", "T_)", "T_{", "S_StmtList" , "T_}"}
         });
         put("S_FuncParmStmtList", new String[][]{
-            {"S_FuncParmStmt"},
-            {"S_FuncParmStmt", "T_,", "S_FuncParmStmtList"},
-        });
-        put("S_FuncParmStmt", new String[][]{
-            {"T_VARIABLE_T", "T_IDENT"}
+            {"S_Decl"},
+            {"S_Decl", "T_,", "S_FuncParmStmtList"},
         });
         put("S_StmtList", new String[][] {
             {"S_Stmt", "S_StmtList"},
             {"S_Stmt"},
         });
         put("S_Stmt", new String[][] {
-            {"T_Cout", "S_CoutStmtList"}
-            // {"T_RETURN"}
+            {"T_Cout", "S_CoutStmtList", "T_;"},
+            {"T_RETURN", "T_Term", "T_;"}
         });
         put("S_CoutStmtList", new String[][] {
             {"T_SHL", "S_Expn"},
             {"T_SHL", "S_Expn", "S_CoutStmtList"}
         });
-        put("Expn", new String[][] {
-            {"T_Term"},
-            {"T_Term", "T_", "Expn"}
+        put("S_Decl", new String[][] {
+            {"T_VARIABLE_T", "T_IDENT"},
+            // {"T_Term", "T_", "Expn"}
         });
+        put("S_Expn", new String[][] {
+            {"T_Term"},
+            // {"T_Term", "T_", "Expn"}
+        });
+        
     }};
 
     static String[][] getSyntaxTable(String syntax) {

@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int a[3][3];
     a[0][0] = 1;
     a[0][1] = 2;

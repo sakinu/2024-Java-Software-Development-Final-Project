@@ -1,58 +1,54 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT a
+IDENT		a
 '['
-INT_LIT 10
+INT_LIT		10
 ']'
 VAL_ASSIGN
 '{'
-INT_LIT 10
+INT_LIT		10
 ','
-INT_LIT 21
+INT_LIT		21
 ','
-INT_LIT 30
+INT_LIT		30
 ','
-INT_LIT 41
+INT_LIT		41
 ','
-INT_LIT 50
+INT_LIT		50
 '}'
 ';'
 FOR
 '('
 AUTO_T
-IDENT i
+IDENT		i
 ':'
-IDENT a
+IDENT		a
 ')'
 '{'
 COUT
 SHL
-IDENT i
+IDENT		i
 SHL
-IDENT endl
+IDENT		endl
 ';'
 IF
 '('
-IDENT i
+IDENT		i
 MOD
-INT_LIT 2
+INT_LIT		2
 EQL
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Even"
+STRING_LIT	"Even"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'

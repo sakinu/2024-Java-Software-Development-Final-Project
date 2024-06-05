@@ -1,52 +1,48 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT apple
+IDENT		apple
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
 IF
 '('
-IDENT apple
+IDENT		apple
 EQL
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Hello"
+STRING_LIT	"Hello"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 IF
 '('
-IDENT apple
+IDENT		apple
 NEQ
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Hello"
+STRING_LIT	"Hello"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 ELSE
 '{'
 COUT
 SHL
-STRING_LIT "Bye"
+STRING_LIT	"Bye"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'

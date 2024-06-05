@@ -25,10 +25,13 @@ public class Solver {           //找出所有function，載入main
         }
         runStack = new Stack<>();
         termStack = new Stack<>();
-        Preprocessing.init(totalLines, lines, lineTokens);
     }
 
     String getIdentVal(String IdentName) {
+        for(String key : runStack.peek().peek().getSymbolTable().keySet()) {
+            System.out.print(key + ",");
+            runStack.peek().peek().getSymbolTable().get(key).myprint();
+        }
         String ret = null;
         for(int i=runStack.peek().size()-1; i>=0; i--) {
             ret = runStack.peek().get(i).getIdentVal(IdentName);
@@ -38,9 +41,13 @@ public class Solver {           //找出所有function，載入main
     }
 
     void updateIdentVal(String IdentName, Term newTerm) {
+        System.out.println("newTerm = ");
+        newTerm.myprint();
         for(int i=runStack.peek().size()-1; i>=0; i--) {
-            if(runStack.peek().get(i).getIdentVal(IdentName) == null)
+            runStack.peek().get(i).printsymbolTable();
+            if(!runStack.peek().get(i).containsKey(IdentName))
                 continue;
+            System.out.println("GOGO");
             runStack.peek().get(i).updateIdent(IdentName, newTerm);
         }
     }
@@ -112,7 +119,7 @@ public class Solver {           //找出所有function，載入main
                 runState.pushTerm(termResult);
             }
             else {
-                updateIdentVal(termResult.getName(),termResult);
+                updateIdentVal(termResult.getName(), termResult);
             }
         } else {
             switch(lineType) {
@@ -153,6 +160,7 @@ public class Solver {           //找出所有function，載入main
                         runState.setLine(Preprocessing.getEnd(runState.getNowLine()+1));
                         System.out.println("nowLine = " + runState.getNowLine());
                     }
+                    break;
                 case 25:
                     Integer whileLine = runState.getNowLine();
                     Integer nextStart = runState.getNowLine();
@@ -209,6 +217,7 @@ public class Solver {           //找出所有function，載入main
     }
 
     String solve() {
+        Preprocessing.init(totalLines, lines, lineTokens);
         runStack.push(new Stack<>());
         runStack.peek().push(new RunState(Preprocessing.getFunction("main")));
         Integer runTimeCounter = 0;

@@ -1,10 +1,6 @@
 INT_T
 IDENT    	 main
 '('
-STR_T
-IDENT    	 argv
-'['
-']'
 ')'
 '{'
 AUTO_T

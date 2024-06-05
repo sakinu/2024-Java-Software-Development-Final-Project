@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int a = 0, b = 0, c = 10;
 
     while( c != 0 ) {

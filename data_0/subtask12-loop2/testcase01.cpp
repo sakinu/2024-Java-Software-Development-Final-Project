@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int counter = 0;
 
     while( counter < 100000 ) {

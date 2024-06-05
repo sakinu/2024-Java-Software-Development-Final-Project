@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int x = 3;
     float y = 3.14;
     int z1,z2;

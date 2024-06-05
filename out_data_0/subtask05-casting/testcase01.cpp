@@ -1,92 +1,88 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT x
+IDENT		x
 VAL_ASSIGN
-INT_LIT 3
+INT_LIT		3
 ';'
 FLOAT_T
-IDENT y
+IDENT		y
 VAL_ASSIGN
-FLOAT_LIT 3.14
+FLOAT_LIT	3.14
 ';'
 INT_T
-IDENT z1
+IDENT		z1
 ','
-IDENT z2
+IDENT		z2
 ';'
-IDENT z1
+IDENT		z1
 VAL_ASSIGN
-IDENT x
+IDENT		x
 ADD
 '('
 INT_T
 ')'
 '('
-IDENT y
+IDENT		y
 ')'
 ';'
-IDENT z2
+IDENT		z2
 VAL_ASSIGN
 '('
 FLOAT_T
 ')'
-IDENT x
+IDENT		x
 ADD
-IDENT y
+IDENT		y
 ';'
 COUT
 SHL
-IDENT z1
+IDENT		z1
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT z2
+IDENT		z2
 SHL
-IDENT endl
+IDENT		endl
 ';'
-IDENT z1
+IDENT		z1
 VAL_ASSIGN
-IDENT x
+IDENT		x
 ADD
 '('
 INT_T
 ')'
 '('
-FLOAT_LIT 6.28
+FLOAT_LIT	6.28
 ')'
 ';'
-IDENT z2
+IDENT		z2
 VAL_ASSIGN
 '('
 FLOAT_T
 ')'
 '('
-INT_LIT 6
+INT_LIT		6
 ')'
 ADD
-IDENT y
+IDENT		y
 ';'
 COUT
 SHL
-IDENT z1
+IDENT		z1
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT z2
+IDENT		z2
 SHL
-IDENT endl
+IDENT		endl
 ';'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

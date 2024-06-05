@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int a[10] = { 10, 21, 30, 41, 50 };
     
     for( auto i : a ) {

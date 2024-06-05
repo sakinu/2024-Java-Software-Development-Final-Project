@@ -1,121 +1,112 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT a
+IDENT		a
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 ';'
 FOR
 '('
 INT_T
-IDENT i
+IDENT		i
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT i
+IDENT		i
 LES
-INT_LIT 3
+INT_LIT		3
 ';'
-IDENT i
-ADD
-ADD
+IDENT		i
+INC_ASSIGN
 ')'
 '{'
 FOR
 '('
 INT_T
-IDENT j
+IDENT		j
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT j
+IDENT		j
 LES
-INT_LIT 3
+INT_LIT		3
 ';'
-IDENT j
-ADD
-ADD
+IDENT		j
+INC_ASSIGN
 ')'
 '{'
-IDENT a
+IDENT		a
 '['
-IDENT i
+IDENT		i
 ']'
 '['
-IDENT j
+IDENT		j
 ']'
 VAL_ASSIGN
 '('
-IDENT i
+IDENT		i
 ADD
-IDENT j
+IDENT		j
 ADD
-INT_LIT 998244353
+INT_LIT		998244353
 ')'
 MOD
-INT_LIT 82781
+INT_LIT		82781
 ';'
 '}'
 '}'
 FOR
 '('
 INT_T
-IDENT i
+IDENT		i
 VAL_ASSIGN
-INT_LIT 2
+INT_LIT		2
 ';'
-IDENT i
-GTR
-VAL_ASSIGN
-INT_LIT 0
+IDENT		i
+GEQ
+INT_LIT		0
 ';'
-IDENT i
-SUB
-SUB
+IDENT		i
+DEC_ASSIGN
 ')'
 '{'
 FOR
 '('
 INT_T
-IDENT j
+IDENT		j
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ';'
-IDENT j
+IDENT		j
 LES
-INT_LIT 3
+INT_LIT		3
 ';'
-IDENT j
-ADD
-ADD
+IDENT		j
+INC_ASSIGN
 ')'
 '{'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-IDENT i
+IDENT		i
 ']'
 '['
-IDENT j
+IDENT		j
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

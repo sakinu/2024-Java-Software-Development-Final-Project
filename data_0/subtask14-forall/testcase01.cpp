@@ -8,7 +8,7 @@ void nothing_function(string s){
     cout << mod(-10,2) << endl;
     return;
 }
-int main(string argv[]) {
+int main() {
     nothing_function("Hello world");
     // comment
 /*

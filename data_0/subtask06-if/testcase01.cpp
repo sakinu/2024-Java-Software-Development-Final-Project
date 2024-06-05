@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int apple = 0;
     if( apple == 0 ) {
         cout << "Hello" << endl;

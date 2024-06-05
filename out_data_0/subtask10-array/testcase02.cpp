@@ -1,104 +1,100 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT a
+IDENT		a
 '['
-INT_LIT 5
+INT_LIT		5
 ']'
 VAL_ASSIGN
 '{'
-INT_LIT 10
+INT_LIT		10
 ','
-INT_LIT 20
+INT_LIT		20
 ','
-INT_LIT 30
+INT_LIT		30
 ','
-INT_LIT 40
+INT_LIT		40
 ','
-INT_LIT 50
+INT_LIT		50
 '}'
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 4
+INT_LIT		4
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 INT_T
-IDENT b
+IDENT		b
 '['
-INT_LIT 1001
+INT_LIT		1001
 ']'
 VAL_ASSIGN
 '{'
 '}'
 ';'
-IDENT b
+IDENT		b
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 VAL_ASSIGN
-INT_LIT 9
+INT_LIT		9
 ';'
-IDENT b
+IDENT		b
 '['
-INT_LIT 1000
+INT_LIT		1000
 ']'
 VAL_ASSIGN
-INT_LIT 1000
+INT_LIT		1000
 ';'
 COUT
 SHL
-IDENT b
+IDENT		b
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT b
+IDENT		b
 '['
-INT_LIT 1000
+INT_LIT		1000
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'

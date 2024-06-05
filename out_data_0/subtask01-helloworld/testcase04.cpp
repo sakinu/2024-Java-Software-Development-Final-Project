@@ -1,21 +1,17 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "Hello "
+STRING_LIT	"Hello "
 SHL
-STRING_LIT "World"
+STRING_LIT	"World"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

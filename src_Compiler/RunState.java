@@ -39,6 +39,17 @@ public class RunState {                    //for遞迴
         }
     }
 
+    boolean containsKey(String name) {
+        return symbolTable.containsKey(name);
+    }
+
+    void printsymbolTable() {
+        for(var key : symbolTable.keySet()) {
+            System.out.print(key + " ");
+            symbolTable.get(key).myprint();
+        }
+    }
+
     int getNowLine() {
         return this.nowLine;
     }
@@ -80,6 +91,8 @@ public class RunState {                    //for遞迴
     }
 
     void updateIdent(String IdentName, Term term) {
+        System.out.println("upd");
+        term.myprint();
         symbolTable.put(IdentName, term);
     }
 
@@ -94,7 +107,8 @@ public class RunState {                    //for遞迴
     String getCout() {
         StringBuilder cout = new StringBuilder();
         for(int i=0; i<TermStack.size(); i++){
-            cout.append("_").append(Api.converOutput(TermStack.get(i))).append("_");
+            // cout.append("_").append(Api.converOutput(TermStack.get(i))).append("_");
+            cout.append(Api.converOutput(TermStack.get(i)));
         }
         TermStack.clear();
         return cout.toString();
@@ -103,10 +117,8 @@ public class RunState {                    //for遞迴
     Integer getIdentType(String IdentName) {
         Integer ret = Api.getKeywordType(IdentName);
         if(ret != null) return ret;
-        for(int level = symbolTable.size()-1; level >= 0; level--) {
-            if(symbolTable.containsKey(IdentName)) {
-                return symbolTable.get(IdentName).getType();
-            }
+        if(symbolTable.containsKey(IdentName)) {
+            return symbolTable.get(IdentName).getType();
         }
         return null;
     }
@@ -114,12 +126,14 @@ public class RunState {                    //for遞迴
     String getIdentVal(String IdentName) {
         String ret = Api.getKeywordVal(IdentName);
         if(ret != null) return ret;
-        for(int level = symbolTable.size()-1; level >= 0; level--) {
-            if(symbolTable.containsKey(IdentName)) {
-                return symbolTable.get(IdentName).getVal();
-            }
+        if(symbolTable.containsKey(IdentName)) {
+            return symbolTable.get(IdentName).getVal();
         }
         return null;
+    }
+
+    HashMap<String, Term> getSymbolTable() {
+        return symbolTable;
     }
 
     String getRunType() {

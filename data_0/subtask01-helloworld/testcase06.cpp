@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     cout << "Hell" << 'o' << " w" << "o" << "rld" << endl;
     return 0;
 }

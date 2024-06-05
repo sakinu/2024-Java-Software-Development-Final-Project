@@ -1,4 +1,4 @@
-int main(string argv[]) {
+int main() {
     int x = 0;
     cout << ( x) << endl;
     x = 10;

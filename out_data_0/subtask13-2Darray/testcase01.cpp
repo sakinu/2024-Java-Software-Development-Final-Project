@@ -1,129 +1,125 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT a
+IDENT		a
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 '['
-INT_LIT 3
+INT_LIT		3
 ']'
 ';'
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 VAL_ASSIGN
-INT_LIT 1
+INT_LIT		1
 ';'
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 VAL_ASSIGN
-INT_LIT 2
+INT_LIT		2
 ';'
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 VAL_ASSIGN
-INT_LIT 3
+INT_LIT		3
 ';'
-IDENT a
+IDENT		a
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 VAL_ASSIGN
-INT_LIT 4
+INT_LIT		4
 ';'
-IDENT a
+IDENT		a
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 VAL_ASSIGN
-INT_LIT 5
+INT_LIT		5
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 0
+INT_LIT		0
 ']'
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 '['
-INT_LIT 1
+INT_LIT		1
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 '['
-INT_LIT 2
+INT_LIT		2
 ']'
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'

@@ -1,86 +1,81 @@
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 INT_T
-IDENT a
+IDENT		a
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ','
-IDENT b
+IDENT		b
 VAL_ASSIGN
-INT_LIT 0
+INT_LIT		0
 ','
-IDENT c
+IDENT		c
 VAL_ASSIGN
-INT_LIT 10
+INT_LIT		10
 ';'
 IF
 '('
-IDENT a
+IDENT		a
 EQL
-INT_LIT 0
+INT_LIT		0
 LAN
-IDENT b
+IDENT		b
 EQL
-INT_LIT 0
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-IDENT a
+IDENT		a
 SHL
-IDENT b
+IDENT		b
 SHL
-IDENT c
+IDENT		c
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 IF
 '('
-IDENT c
+IDENT		c
 SUB
-IDENT b
-GTR
-VAL_ASSIGN
-INT_LIT 0
+IDENT		b
+GEQ
+INT_LIT		0
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "OK!"
+STRING_LIT	"OK!"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 IF
 '('
 '('
-IDENT a
+IDENT		a
 EQL
-INT_LIT 0
+INT_LIT		0
 LAN
-IDENT b
+IDENT		b
 NEQ
-INT_LIT 0
+INT_LIT		0
 ')'
 LOR
-IDENT c
+IDENT		c
 EQL
-INT_LIT 10
+INT_LIT		10
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "test1"
+STRING_LIT	"test1"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 ELSE
@@ -88,39 +83,39 @@ ELSE
 IF
 '('
 '('
-IDENT c
+IDENT		c
 EQL
-INT_LIT 10
+INT_LIT		10
 LOR
-IDENT a
+IDENT		a
 NEQ
-INT_LIT 0
+INT_LIT		0
 ')'
 LAN
 '('
 '('
-IDENT a
+IDENT		a
 EQL
-INT_LIT 0
+INT_LIT		0
 LAN
-IDENT b
+IDENT		b
 EQL
-INT_LIT 0
+INT_LIT		0
 LAN
-IDENT c
+IDENT		c
 EQL
-INT_LIT 0
+INT_LIT		0
 LAN
 '('
-IDENT c
+IDENT		c
 EQL
-INT_LIT 10
+INT_LIT		10
 LOR
 '('
-IDENT a
+IDENT		a
 ')'
 EQL
-INT_LIT 0
+INT_LIT		0
 ')'
 ')'
 ')'
@@ -128,46 +123,46 @@ INT_LIT 0
 '{'
 COUT
 SHL
-STRING_LIT "test2"
+STRING_LIT	"test2"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 ELSE
 '{'
 COUT
 SHL
-STRING_LIT "test3"
+STRING_LIT	"test3"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 IF
 '('
-BOOL_LIT true
+BOOL_LIT	true
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "test4"
+STRING_LIT	"test4"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 '}'
 '}'
 IF
 '('
-BOOL_LIT true
+BOOL_LIT	true
 ')'
 '{'
 COUT
 SHL
-STRING_LIT "test6"
+STRING_LIT	"test6"
 SHL
-IDENT endl
+IDENT		endl
 ';'
 '}'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

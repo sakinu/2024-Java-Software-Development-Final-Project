@@ -1,84 +1,80 @@
 BOOL_T
-IDENT check
+IDENT		check
 '('
 INT_T
-IDENT a
+IDENT		a
 ','
 INT_T
-IDENT b
+IDENT		b
 ','
 STR_T
-IDENT s
+IDENT		s
 ','
 BOOL_T
-IDENT c
+IDENT		c
 ')'
 '{'
 COUT
 SHL
-IDENT s
+IDENT		s
 SHL
-IDENT endl
+IDENT		endl
 ';'
 COUT
 SHL
-IDENT a
+IDENT		a
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT b
+IDENT		b
 SHL
-STRING_LIT " "
+STRING_LIT	" "
 SHL
-IDENT s
+IDENT		s
 SHL
-IDENT endl
+IDENT		endl
 ';'
 RETURN
 '('
-IDENT c
+IDENT		c
 EQL
-BOOL_LIT true
+BOOL_LIT	true
 ')'
 ';'
 '}'
 INT_T
-IDENT main
+IDENT		main
 '('
-STR_T
-IDENT argv
-'['
-']'
 ')'
 '{'
 BOOL_T
-IDENT result
+IDENT		result
 VAL_ASSIGN
-IDENT check
+IDENT		check
 '('
-INT_LIT 1
+INT_LIT		1
 ','
-INT_LIT 2
+INT_LIT		2
 ','
-STRING_LIT "apple"
+STRING_LIT	"apple"
 ','
-BOOL_LIT true
+BOOL_LIT	true
 ')'
 ';'
 INT_T
-IDENT num
+IDENT		num
 VAL_ASSIGN
-IDENT result
+IDENT		result
 ADD
-INT_LIT 7
+INT_LIT		7
 ';'
 COUT
 SHL
-IDENT num
+IDENT		num
 SHL
-IDENT endl
+IDENT		endl
 ';'
 RETURN
-INT_LIT 0
+INT_LIT		0
 ';'
 '}'

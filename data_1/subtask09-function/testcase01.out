@@ -45,10 +45,6 @@ BOOL_LIT 	 true
 INT_T
 IDENT    	 main
 '('
-STR_T
-IDENT    	 argv
-'['
-']'
 ')'
 '{'
 BOOL_T
